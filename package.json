@@ -1,0 +1,23 @@
+{
+  "name": "pixi-skia-pdf",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pixi.js scene → Skia rendering + vector PDF export via Skia PDF backend",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "typecheck": "tsc --noEmit",
+    "build:wasm": "bash scripts/build-canvaskit.sh"
+  },
+  "dependencies": {
+    "canvaskit-wasm": "0.39.1",
+    "pixi.js-legacy": "7.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "5.4.5",
+    "vite": "5.2.11"
+  }
+}

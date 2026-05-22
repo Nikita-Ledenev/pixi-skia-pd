@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+*.log
+
+# Local environment overrides
+.env.local
+.env.*.local
+/.github/

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixi → Skia → PDF</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Pixi → Skia → PDF</h1>
+      <p class="subtitle">
+        Слева — рендер через <code>pixi.js-legacy</code> (forceCanvas).
+        Справа — собственная Skia-обёртка над тем же <code>PIXI.Container</code>.
+        Экспорт PDF через Skia PDF backend (векторно).
+      </p>
+    </header>
+
+    <section class="controls">
+      <button id="btn-random" type="button" class="btn btn-primary">
+        Сгенерировать случайную линию/фигуру
+      </button>
+      <button id="btn-export" type="button" class="btn btn-secondary">
+        Экспорт в PDF
+      </button>
+      <span id="status" class="status" role="status" aria-live="polite"></span>
+    </section>
+
+    <main class="stage">
+      <figure class="canvas-card">
+        <figcaption>Канвас 1 · Pixi.js</figcaption>
+        <div class="canvas-host" id="pixi-host"></div>
+      </figure>
+      <figure class="canvas-card">
+        <figcaption>Канвас 2 · Skia</figcaption>
+        <canvas id="skia-canvas" width="600" height="400"></canvas>
+      </figure>
+    </main>
+
+    <footer class="footer">
+      <span>Журнал событий:</span>
+      <pre id="log" class="log" aria-live="polite"></pre>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
